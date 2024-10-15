@@ -26,6 +26,7 @@ After you explore the UI, feel free to also try out various ways to intercat wit
 Start by creating a new conda environment. All the mentioned steps are to be executed inside a terminal. 
 ```
 conda create --name mlflow_env python=3.8 pip
+conda activate mlflow_env
 
 ```
 Install the requirements.txt with pip:
@@ -39,13 +40,14 @@ Create a Jupyter notebook Kernel.
 
 ```
 conda install ipykernel
-python -m ipykernel install --user --name mflow_kernel
+
+python -m ipykernel install --user --name mlflow_env --display-name "MLflow_env"
 
 ```
 
 Then select the created kernel and execute the Jupyter notebook. (If you slect an existing kernel and run the command !pip install -r requirements.txt in your notebook, then the requirements will be installed in that  existing environment. However you will not have a completely new and clean environment for experimentation, which is not the best practice.)
 
-You can explore the mlflow UI via the command, sued in teh terminal. 
+You can explore the mlflow UI via the command, used in the terminal. 
 ```
 mflow ui 
 
